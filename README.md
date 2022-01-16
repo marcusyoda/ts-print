@@ -21,6 +21,11 @@ Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a 
 ## WHO SHOULD USE:
 Any developer who needs clean, well-formatted messages in the terminal.
 
+## Author
+**Marcus Vinícius Mendes Gonçalves
+[@marcusyoda](https://github.com/marcusyoda)** - *Prototype development, final version and testing.*
+
+>>>>>>> e1e6c08ccc74be0f2f6f40ed570fbdf8b40cd9eb
 ## GETTING STARTED:
 First you need to install with npm or yarn...
 ```bash
@@ -49,6 +54,7 @@ Print('Faça ou não faça, tentativa não há!').ok();
 Print().br();
 ```
 
+<<<<<<< HEAD
 ### PowerShell - Windows 10
 Resultado no PowerShell, usando o Windows 10:
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)
@@ -69,3 +75,25 @@ To view the available versions, look at: [tags on this repository](https://githu
 
 ## LICENSE
 This project is licensed by MIT. See more at [LICENSE.md](LICENSE.md) for details.
+=======
+### POWERSHELL - Windows 10
+Resultado no PowerShell, usando o Windows 10:
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)
+
+### POWERSHELL - Windows 11
+Resultado no PowerShell, usando o Windows 11:
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)
+
+### BASH - Ubuntu 18.04
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/wsl_ubuntu_18-win11-terminal.png)
+
+## DEPENDENDENCIES:
+- Proudly, with 3Kb, running with no dependencies.
+
+## VERSIONING
+Versioning [SemVer](http://semver.org/). To view the available versions, look at: [tags on this repository](https://github.com/Acelera/rc-console/tags).
+
+## LICENSE:
+Developed by Marcus Yoda, during javascript research and study.
+- [MIT License](https://github.com/marcusyoda/ts-print/blob/master/LICENSE)
+>>>>>>> e1e6c08ccc74be0f2f6f40ed570fbdf8b40cd9eb
