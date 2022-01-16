@@ -1,12 +1,12 @@
-# TS-CONSOLE  
+# TS-PRINT  
 Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a ser intuitiva.  
   
-![GitHub package.json version](https://img.shields.io/github/package-json/v/marcusyoda/ts-console)
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/af-scaffolder) ![npm](https://img.shields.io/npm/dy/ts-console) 
-[![](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/marcusyoda/ts-console) 
-[![](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/marcusyoda/ts-console) 
-![GitHub Repo stars](https://img.shields.io/github/stars/marcusyoda/ts-console)
-![GitHub issues](https://img.shields.io/github/issues/marcusyoda/ts-console)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/marcusyoda/ts-print)
+![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/af-scaffolder) ![npm](https://img.shields.io/npm/dy/ts-print) 
+[![](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/marcusyoda/ts-print) 
+[![](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/marcusyoda/ts-print) 
+![GitHub Repo stars](https://img.shields.io/github/stars/marcusyoda/ts-print)
+![GitHub issues](https://img.shields.io/github/issues/marcusyoda/ts-print)
   
 ## TECHNOLOGY:  
 
@@ -51,11 +51,20 @@ Logger().br();
 
 ### PowerShell - Windows 10
 Resultado no PowerShell, usando o Windows 10:  
-![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-console/main/screenshots/powershell-win11-terminal.png)  
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)  
 
 ### PowerShell - Windows 11
 Resultado no PowerShell, usando o Windows 11:  
-![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-console/main/screenshots/powershell-win11-terminal.png)  
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)  
   
 ### bash - Ubuntu 18.04
-![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-console/main/screenshots/wsl_ubuntu_18-win11-terminal.png)  
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/wsl_ubuntu_18-win11-terminal.png)  
+
+## Versioning
+Versioning [SemVer](http://semver.org/). To view the available versions, look at: [tags on this repository](https://github.com/Acelera/rc-console/tags). 
+
+## Author  
+* **Marcus Vinícius Mendes Gonçalves - [@marcusyoda](https://github.com/marcusyoda)** - *Prototype development, final version and testing.*
+
+## License
+This project is licensed by MIT. See more at [LICENSE.md](LICENSE.md) for details.  
