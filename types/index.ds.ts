@@ -67,4 +67,4 @@ export enum LogType {
   ok = 'ok',
 }
 
-export type LoggerInterface = (msg: string, type: string, dump?: boolean) => () => string;
+export type PrintInterface = (msg: string, type: string, dump?: boolean) => () => string;

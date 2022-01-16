@@ -2,7 +2,7 @@ import {br as breakLine, groupByType, now} from './src/helpers';
 import {StyleOpt} from './types/index.ds';
 import toStyle from './src/toStyles';
 
-export const Logger = (msg = '') => ({
+export const Print = (msg = '') => ({
   exec(type: string, dump = true) {
     const groupText: string = groupByType(type);
 
@@ -53,26 +53,26 @@ export const Logger = (msg = '') => ({
     breakLine();
   },
   ok(dump = true) {
-    return Logger(msg).exec('ok', dump);
+    return Print(msg).exec('ok', dump);
   },
   success(dump = true) {
-    return Logger(msg).exec('success', dump);
+    return Print(msg).exec('success', dump);
   },
   warn(dump = true) {
-    return Logger(msg).exec('warn', dump);
+    return Print(msg).exec('warn', dump);
   },
   err(dump = true) {
-    return Logger(msg).exec('err', dump);
+    return Print(msg).exec('err', dump);
   },
   fail(dump = true) {
-    return Logger(msg).exec('fail', dump);
+    return Print(msg).exec('fail', dump);
   },
   notice(dump = true) {
-    return Logger(msg).exec('notice', dump);
+    return Print(msg).exec('notice', dump);
   },
   info(dump = true) {
-    return Logger(msg).exec('info', dump);
+    return Print(msg).exec('info', dump);
   },
 });
 
-export default Logger;
+export default Print;
