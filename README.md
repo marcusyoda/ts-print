@@ -24,29 +24,29 @@ Recommended for all those who want to collect and structure data from an HTML fo
 ## GETTING STARTED:
 First you need to install with npm or yarn...  
 ```bash
-npm install --save ts-console
+npm install --save ts-print
 ```  
 
 ```bash
-yarn add ts-console
+yarn add ts-print
 ```  
   
 ...then you can show any type of message:  
 ```js
-import Logger from 'ts-console';
+import Print from 'ts-print';
 
-Logger().br();
-Logger('Faça ou não faça, tentativa não há!').info();
-Logger('Faça ou não faça, tentativa não há!').notice();
-Logger().br();
-Logger('Faça ou não faça, tentativa não há!').warn();
-Logger().br();
-Logger('Faça ou não faça, tentativa não há!').fail();
-Logger('Faça ou não faça, tentativa não há!').err();
-Logger().br();
-Logger('Faça ou não faça, tentativa não há!').success();
-Logger('Faça ou não faça, tentativa não há!').ok();
-Logger().br();
+Print().br();
+Print('Faça ou não faça, tentativa não há!').info();
+Print('Faça ou não faça, tentativa não há!').notice();
+Print().br();
+Print('Faça ou não faça, tentativa não há!').warn();
+Print().br();
+Print('Faça ou não faça, tentativa não há!').fail();
+Print('Faça ou não faça, tentativa não há!').err();
+Print().br();
+Print('Faça ou não faça, tentativa não há!').success();
+Print('Faça ou não faça, tentativa não há!').ok();
+Print().br();
 ```
 
 ### PowerShell - Windows 10
