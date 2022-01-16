@@ -20,7 +20,11 @@ Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a 
 
 ## WHO SHOULD USE:
 Recommended for all those who want to collect and structure data from an HTML form.
-  
+
+## Author  
+**Marcus Vinícius Mendes Gonçalves  
+[@marcusyoda](https://github.com/marcusyoda)** - *Prototype development, final version and testing.*
+    
 ## GETTING STARTED:
 First you need to install with npm or yarn...  
 ```bash
@@ -60,11 +64,12 @@ Resultado no PowerShell, usando o Windows 11:
 ### bash - Ubuntu 18.04
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/wsl_ubuntu_18-win11-terminal.png)  
 
+## DEPENDENDENCIES:
+- Proudly, with 3Kb, running with no dependencies.
+
 ## Versioning
 Versioning [SemVer](http://semver.org/). To view the available versions, look at: [tags on this repository](https://github.com/Acelera/rc-console/tags). 
-
-## Author  
-* **Marcus Vinícius Mendes Gonçalves - [@marcusyoda](https://github.com/marcusyoda)** - *Prototype development, final version and testing.*
-
-## License
-This project is licensed by MIT. See more at [LICENSE.md](LICENSE.md) for details.  
+    
+## LICENSE:
+Developed by Marcus Yoda, during javascript research and study.
+- [MIT License](https://github.com/marcusyoda/ts-print/blob/master/LICENSE)
