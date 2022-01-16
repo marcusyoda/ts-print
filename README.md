@@ -53,21 +53,21 @@ Print('Faça ou não faça, tentativa não há!').ok();
 Print().br();
 ```
 
-### PowerShell - Windows 10
+### POWERSHELL - Windows 10
 Resultado no PowerShell, usando o Windows 10:  
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)  
 
-### PowerShell - Windows 11
+### POWERSHELL - Windows 11
 Resultado no PowerShell, usando o Windows 11:  
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)  
   
-### bash - Ubuntu 18.04
+### BASH - Ubuntu 18.04
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/wsl_ubuntu_18-win11-terminal.png)  
 
 ## DEPENDENDENCIES:
 - Proudly, with 3Kb, running with no dependencies.
 
-## Versioning
+## VERSIONING
 Versioning [SemVer](http://semver.org/). To view the available versions, look at: [tags on this repository](https://github.com/Acelera/rc-console/tags). 
     
 ## LICENSE:
