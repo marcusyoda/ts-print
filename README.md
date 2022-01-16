@@ -1,4 +1,4 @@
-# ts-console
+# TS-CONSOLE  
 Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a ser intuitiva.  
   
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/marcusyoda/ts-console)
@@ -8,7 +8,7 @@ Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a 
 ![GitHub Repo stars](https://img.shields.io/github/stars/marcusyoda/ts-console)
 ![GitHub issues](https://img.shields.io/github/issues/marcusyoda/ts-console)
   
-## 2. - Tecnology:  
+## TECHNOLOGY:  
 
 ![LINUX](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![WINDOWS](https://img.shields.io/badge/Windows-navy?style=flat-square&logo=windows&logoColor=white)
@@ -49,10 +49,13 @@ Logger('Faça ou não faça, tentativa não há!').ok();
 Logger().br();
 ```
 
-### 3.1 - PowerShell - Windows 11
+### PowerShell - Windows 10
 Resultado no PowerShell, usando o Windows 10:  
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-console/main/screenshots/powershell-win11-terminal.png)  
 
-### 3.2 -PowerShell - Windows 11
+### PowerShell - Windows 11
 Resultado no PowerShell, usando o Windows 11:  
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-console/main/screenshots/powershell-win11-terminal.png)  
   
-### 3.3 -bash - Ubuntu 18.04
+### bash - Ubuntu 18.04
+![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-console/main/screenshots/wsl_ubuntu_18-win11-terminal.png)  
