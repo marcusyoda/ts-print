@@ -1,5 +1,5 @@
 # TS-PRINT
-Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a ser intuitiva.
+Useful library for debugging in node, with formatted colors and dates, is intended to be intuitive.  
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/marcusyoda/ts-print)
 ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/af-scaffolder) ![npm](https://img.shields.io/npm/dy/ts-print)
