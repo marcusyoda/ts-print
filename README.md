@@ -53,10 +53,6 @@ Print('Faça ou não faça, tentativa não há!').ok();
 Print().br();
 ```
 
-### POWERSHELL - Windows 10
-Resultado no PowerShell, usando o Windows 10:
-![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)
-
 ### POWERSHELL - Windows 11
 Resultado no PowerShell, usando o Windows 11:
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)
