@@ -2,7 +2,7 @@
 Useful library for debugging in node, with formatted colors and dates, is intended to be intuitive.  
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/marcusyoda/ts-print)
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/af-scaffolder) ![npm](https://img.shields.io/npm/dy/ts-print)
+![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/ts-print) ![npm](https://img.shields.io/npm/dy/ts-print)
 [![](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/marcusyoda/ts-print)
 [![](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/marcusyoda/ts-print)
 ![GitHub Repo stars](https://img.shields.io/github/stars/marcusyoda/ts-print)
@@ -22,7 +22,7 @@ Useful library for debugging in node, with formatted colors and dates, is intend
 Any developer who needs clean, well-formatted messages in the terminal.
 
 ## AUTHOR
-**Marcus Vinícius Mendes Gonçalves
+**Marcus Yoda
 [@marcusyoda](https://github.com/marcusyoda)**  
 *Prototype development, final version and testing.*  
 
@@ -66,7 +66,7 @@ Versioning [SemVer](http://semver.org/).
 To view the available versions, look at: [tags on this repository](https://github.com/marcusyoda/ts-print/tags).  
 
 ## DEPENDENDENCIES:
-- Proudly, with 3Kb, running with no dependencies.  
+- Proudly, running with no dependencies.  
 
 ## LICENSE:
 Developed by Marcus Yoda, during javascript research and study.  
