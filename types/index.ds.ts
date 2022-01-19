@@ -67,4 +67,18 @@ export enum LogType {
   ok = 'ok',
 }
 
-export type PrintInterface = (msg: string, type: string, dump?: boolean) => () => string;
+export type PrintDumperInterface = (dump?: boolean) => string;
+
+export interface IPrintResponse {
+  br: () => void,
+  success: PrintDumperInterface,
+  warn: PrintDumperInterface,
+  err: PrintDumperInterface,
+  fail: PrintDumperInterface,
+  notice: PrintDumperInterface,
+  info: PrintDumperInterface,
+  exec: (type: string, dump: boolean) => string,
+}
+
+export type IPrint = (msg: string) => IPrintResponse;
+export default IPrint;

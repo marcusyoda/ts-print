@@ -1,8 +1,8 @@
 import {br as breakLine, groupByType, now} from './src/helpers';
-import {StyleOpt} from './types/index.ds';
+import IPrint, {StyleOpt} from './types/index.ds';
 import toStyle from './src/toStyles';
 
-export const Print = (msg = '') => ({
+export const Print: IPrint = (msg = '') => ({
   exec(type: string, dump = true) {
     const groupText: string = groupByType(type);
 

@@ -6,3 +6,7 @@ tsconfig.json
 /tests/
 /screenshots
 *.sw*
+nyc_output
+coverage
+.idea/
+.vscode/
