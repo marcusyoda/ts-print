@@ -1,7 +1,7 @@
 {
   "name": "ts-print",
   "description": "Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a ser intuitiva.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "author": "Marcus Yoda <marcusyoda13@gmail.com>",
   "repository": "https://github.com/marcusyoda/ts-print.git",
