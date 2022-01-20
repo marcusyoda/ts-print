@@ -1,7 +1,7 @@
 {
   "name": "ts-print",
   "description": "Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a ser intuitiva.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "author": "Marcus Yoda <marcusyoda13@gmail.com>",
   "repository": "https://github.com/marcusyoda/ts-print.git",
@@ -14,6 +14,7 @@
   "scripts": {
     "build": "rollup -c",
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
+    "deploy": "yarn build && yarn publish",
     "lint": "./node_modules/.bin/eslint src/*.ts index.ts",
     "test": "mocha -r ts-node/register tests/*.test.ts"
   },
@@ -37,5 +38,6 @@
     "rollup-plugin-typescript2": "^0.31.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
-  }
+  },
+  "dependencies": {}
 }
