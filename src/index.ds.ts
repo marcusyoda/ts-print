@@ -1,3 +1,6 @@
+export type stringFunction = (string: string) => string;
+export type voidFunction = () => void;
+
 export enum StyleOpt {
   reset = 'reset',
   bold = 'bold',
