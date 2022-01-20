@@ -74,6 +74,7 @@ export type PrintDumperInterface = (dump?: boolean) => string;
 
 export interface IPrintResponse {
   br: voidFunction,
+  ok: PrintDumperInterface,
   success: PrintDumperInterface,
   warn: PrintDumperInterface,
   err: PrintDumperInterface,
