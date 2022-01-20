@@ -73,14 +73,16 @@ export enum LogType {
 export type PrintDumperInterface = (dump?: boolean) => string;
 
 export interface IPrintResponse {
-  br: () => void,
+  br: voidFunction,
   success: PrintDumperInterface,
   warn: PrintDumperInterface,
   err: PrintDumperInterface,
   fail: PrintDumperInterface,
   notice: PrintDumperInterface,
   info: PrintDumperInterface,
+  toStyle: stringFunction,
   exec: (type: string, dump: boolean) => string,
+  dump: () => string,
 }
 
 export type IPrint = (msg: string) => IPrintResponse;

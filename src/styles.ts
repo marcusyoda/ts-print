@@ -1,4 +1,4 @@
-import {StyleType, StyleOpt} from '../types/index.ds';
+import {StyleType, StyleOpt} from './index.ds';
 
 export const Styles: StyleType = {
   [StyleOpt.reset]: [0, 0],

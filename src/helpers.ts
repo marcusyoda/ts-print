@@ -1,28 +1,28 @@
-import {LogType} from '../types/index.ds';
+import {LogType, stringFunction, voidFunction} from './index.ds';
 
 export const now = (): string => (new Date()).toLocaleDateString();
 
 /**
  * @param type
  */
-export const groupByType = (type: string): string => {
+export const groupByType: stringFunction = (type: string): string => {
   switch (type) {
     case (LogType.fail):
-      return 'FALHA';
+      return 'FAIL';
     case (LogType.err):
-      return 'ERRO';
+      return 'ERR';
     case (LogType.warn):
-      return 'ALERTA';
+      return 'ALERT';
     case (LogType.info):
-      return 'INFORMAÇÃO';
+      return 'INFO';
     case (LogType.notice):
-      return 'NOTÍCIA';
+      return 'NOTICE';
     case (LogType.success):
-      return 'SUCESSO';
+      return 'SUCCESS';
     case (LogType.ok):
       return 'OK';
   }
   return type;
 };
 
-export const br = () => console.log('');
+export const br: voidFunction = () => console.log('');

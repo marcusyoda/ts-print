@@ -1,6 +1,6 @@
-import {br as breakLine, groupByType, now} from './src/helpers';
-import IPrint, {StyleOpt} from './types/index.ds';
-import toStyle from './src/toStyles';
+import {br as breakLine, groupByType, now} from './helpers';
+import IPrint, {StyleOpt} from './index.ds';
+import toStyle from './toStyles';
 
 export const Print: IPrint = (msg = '') => ({
   exec(type: string, dump = true) {
@@ -49,6 +49,10 @@ export const Print: IPrint = (msg = '') => ({
 
     return out;
   },
+  toStyle(style: string) {
+    console.log(toStyle(msg, style))
+    return msg;
+  },
   br() {
     breakLine();
   },
@@ -73,6 +77,8 @@ export const Print: IPrint = (msg = '') => ({
   info(dump = true) {
     return Print(msg).exec('info', dump);
   },
+  dump() {
+    console.log(msg);
+    return msg;
+  },
 });
-
-export default Print;

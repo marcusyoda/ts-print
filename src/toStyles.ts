@@ -1,5 +1,5 @@
 import Styles from './styles';
-import {StyleInterface, ToColorInterface} from '../types/index.ds';
+import {StyleInterface, ToColorInterface} from './index.ds';
 
 /**
  * @param color
