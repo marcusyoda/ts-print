@@ -40,8 +40,8 @@ export const Print: IPrint = (msg = '') => ({
     const dateTime: string = toStyle(toStyle(now(), colorDate), StyleOpt.italic);
     const mensagem: string = toStyle(toStyle(msg.toUpperCase().trim(), colorMsg), StyleOpt.bold);
 
-    const out = `[${group}] - ${dateTime} - ${mensagem}`;
-    const outWithColors = `[${group}]  - ${dateTime} - ${mensagem}`;
+    const out = `[${group}]${dateTime}-${mensagem}`;
+    const outWithColors = `[${group}]${dateTime}-${mensagem}`;
 
     if (dump) {
       console.log(outWithColors);
