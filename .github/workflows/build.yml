@@ -1,4 +1,4 @@
-name: Build
+name: SonarCUBE
 on:
   push:
     branches:
