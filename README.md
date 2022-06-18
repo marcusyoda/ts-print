@@ -1,5 +1,5 @@
 # TS-PRINT
-Useful library for debugging in node, with formatted colors and dates, is intended to be intuitive.  
+Useful library for debugging in node, with formatted colors and dates, is intended to be intuitive.
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/marcusyoda/ts-print)
 ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/ts-print) ![npm](https://img.shields.io/npm/dy/ts-print)
@@ -19,12 +19,13 @@ Useful library for debugging in node, with formatted colors and dates, is intend
 
 
 ## WHO SHOULD USE:
-Any developer who needs clean, well-formatted messages in the terminal.
+Any developer who needs clean and well-formatted messages in the terminal.
 
 ## AUTHOR
 **Marcus Yoda
-[@marcusyoda](https://github.com/marcusyoda)**  
-*Prototype development, final version and testing.*  
+[@marcusyoda](https://github.com/marcusyoda)**
+
+*Prototype development, final version and testing.*
 
 ## GETTING STARTED:
 First you need to install with npm or yarn...
@@ -62,12 +63,12 @@ Resultado no PowerShell, usando o Windows 11:
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/wsl_ubuntu_18-win11-terminal.png)
 
 ## VERSIONING
-Versioning [SemVer](http://semver.org/).  
-To view the available versions, look at: [tags on this repository](https://github.com/marcusyoda/ts-print/tags).  
+Versioning [SemVer](http://semver.org/).
+To view the available versions, look at: [tags on this repository](https://github.com/marcusyoda/ts-print/tags).
 
 ## DEPENDENDENCIES:
-- Proudly, running with no dependencies.  
+- Proudly, running with no dependencies.
 
 ## LICENSE:
-Developed by Marcus Yoda, during javascript research and study.  
+Developed by Marcus Yoda, during javascript research and study.
 - [MIT License](https://github.com/marcusyoda/ts-print/blob/master/LICENSE)
