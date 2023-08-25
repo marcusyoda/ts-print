@@ -1,4 +1,5 @@
 # TS-PRINT
+
 Useful library for debugging in node, with formatted colors and dates, is intended to be intuitive.
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/marcusyoda/ts-print)
@@ -17,18 +18,21 @@ Useful library for debugging in node, with formatted colors and dates, is intend
 ![JAVASCRIPT](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript&logoColor=yellow)
 ![NODE](https://img.shields.io/badge/-Nodejs-339933?style=flat-square&logo=Node.js&logoColor=white)
 
-
 ## WHO SHOULD USE:
+
 Any developer who needs clean and well-formatted messages in the terminal.
 
 ## AUTHOR
+
 **Marcus Yoda
 [@marcusyoda](https://github.com/marcusyoda)**
 
-*Prototype development, final version and testing.*
+_Prototype development, final version and testing._
 
 ## GETTING STARTED:
+
 First you need to install with npm or yarn...
+
 ```bash
 npm install --save ts-print
 ```
@@ -38,37 +42,44 @@ yarn add ts-print
 ```
 
 ...then you can show any type of message:
-```js
-import Print from 'ts-print';
 
-Print().br();
-Print('Faça ou não faça, tentativa não há!').info();
-Print('Faça ou não faça, tentativa não há!').notice();
-Print().br();
-Print('Faça ou não faça, tentativa não há!').warn();
-Print().br();
-Print('Faça ou não faça, tentativa não há!').fail();
-Print('Faça ou não faça, tentativa não há!').err();
-Print().br();
-Print('Faça ou não faça, tentativa não há!').success();
-Print('Faça ou não faça, tentativa não há!').ok();
-Print().br();
+```js
+import Print from 'ts-print'
+
+Print().br()
+Print('Faça ou não faça, tentativa não há!').info()
+Print('Faça ou não faça, tentativa não há!').notice()
+Print().br()
+Print('Faça ou não faça, tentativa não há!').warn()
+Print().br()
+Print('Faça ou não faça, tentativa não há!').fail()
+Print('Faça ou não faça, tentativa não há!').err()
+Print().br()
+Print('Faça ou não faça, tentativa não há!').success()
+Print('Faça ou não faça, tentativa não há!').ok()
+Print().br()
 ```
 
 ### POWERSHELL - Windows 11
+
 Resultado no PowerShell, usando o Windows 11:
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/powershell-win11-terminal.png)
 
 ### BASH - Ubuntu 18.04
+
 ![SAMPLE-TERMINAL](https://raw.githubusercontent.com/marcusyoda/ts-print/main/screenshots/wsl_ubuntu_18-win11-terminal.png)
 
 ## VERSIONING
+
 Versioning [SemVer](http://semver.org/).
 To view the available versions, look at: [tags on this repository](https://github.com/marcusyoda/ts-print/tags).
 
 ## DEPENDENDENCIES:
+
 - Proudly, running with no dependencies.
 
 ## LICENSE:
+
 Developed by Marcus Yoda, during javascript research and study.
+
 - [MIT License](https://github.com/marcusyoda/ts-print/blob/master/LICENSE)

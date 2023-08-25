@@ -1,4 +1,4 @@
-import {StyleType, StyleOpt} from './index.ds';
+import { StyleType, StyleOpt } from './index.ds'
 
 export const Styles: StyleType = {
   [StyleOpt.reset]: [0, 0],
@@ -48,6 +48,6 @@ export const Styles: StyleType = {
   [StyleOpt.bgBrightMagenta]: [105, 49],
   [StyleOpt.bgBrightCyan]: [106, 49],
   [StyleOpt.bgBrightWhite]: [107, 49],
-};
+}
 
-export default Styles;
+export default Styles

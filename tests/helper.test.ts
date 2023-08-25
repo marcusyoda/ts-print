@@ -1,43 +1,43 @@
-import {expect} from 'chai';
+import { expect } from 'chai'
 
-describe('HELPERS', function() {
-  it('Must can break line with "br() without any return"', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-  it('Must get "now()" as string date', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-  it('Must get INFO message', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-  it('Must get NOTICE message', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-  it('Must get WARN message', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-  it('Must get ERR message', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-  it('Must get FAIL message', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-  it('Must get SUCCESS message', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-  it('Must get OK message', function() {
-    const result = (5 + 2);
-    expect(result).equal(7);
-  });
-});
+describe('HELPERS', function () {
+  it('Must can break line with "br() without any return"', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+  it('Must get "now()" as string date', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+  it('Must get INFO message', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+  it('Must get NOTICE message', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+  it('Must get WARN message', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+  it('Must get ERR message', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+  it('Must get FAIL message', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+  it('Must get SUCCESS message', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+  it('Must get OK message', function () {
+    const result = 5 + 2
+    expect(result).equal(7)
+  })
+})
 
 // var assert = require('assert');
 // var colors = require('../dist/index');

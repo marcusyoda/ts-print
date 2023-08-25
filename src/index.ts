@@ -1,84 +1,84 @@
-import {br as breakLine, groupByType, now} from './helpers';
-import IPrint, {StyleOpt} from './index.ds';
-import toStyle from './toStyles';
+import { br as breakLine, groupByType, now } from './helpers'
+import IPrint, { StyleOpt } from './index.ds'
+import toStyle from './toStyles'
 
 export const Print: IPrint = (msg = '') => ({
   exec(type: string, dump = true) {
-    const groupText: string = groupByType(type);
+    const groupText: string = groupByType(type)
 
-    let colorGroup: string = StyleOpt.green;
-    let colorDate: string = StyleOpt.brightGreen;
-    let colorMsg: string = StyleOpt.white;
+    let colorGroup: string = StyleOpt.green
+    let colorDate: string = StyleOpt.brightGreen
+    let colorMsg: string = StyleOpt.white
 
     switch (type) {
       case 'ok':
       case 'success':
-        colorGroup = StyleOpt.green;
-        colorDate = StyleOpt.brightGreen;
-        colorMsg = StyleOpt.white;
-        break;
+        colorGroup = StyleOpt.green
+        colorDate = StyleOpt.brightGreen
+        colorMsg = StyleOpt.white
+        break
       case 'warn':
-        colorGroup = StyleOpt.yellow;
-        colorDate = StyleOpt.grey;
-        colorMsg = StyleOpt.white;
-        break;
+        colorGroup = StyleOpt.yellow
+        colorDate = StyleOpt.grey
+        colorMsg = StyleOpt.white
+        break
       case 'err':
       case 'fail':
-        colorGroup = StyleOpt.red;
-        colorDate = StyleOpt.magenta;
-        colorMsg = StyleOpt.white;
-        break;
+        colorGroup = StyleOpt.red
+        colorDate = StyleOpt.magenta
+        colorMsg = StyleOpt.white
+        break
       case 'info':
       case 'notice':
-        colorGroup = StyleOpt.blue;
-        colorDate = StyleOpt.cyan;
-        colorMsg = StyleOpt.white;
-        break;
+        colorGroup = StyleOpt.blue
+        colorDate = StyleOpt.cyan
+        colorMsg = StyleOpt.white
+        break
     }
 
-    const group: string = toStyle(toStyle(toStyle(toStyle(groupText, colorGroup), StyleOpt.bold), 'bold'), 'black');
-    const dateTime: string = toStyle(toStyle(now(), colorDate), StyleOpt.italic);
-    const mensagem: string = toStyle(toStyle(msg.toUpperCase().trim(), colorMsg), StyleOpt.bold);
+    const group: string = toStyle(toStyle(toStyle(toStyle(groupText, colorGroup), StyleOpt.bold), 'bold'), 'black')
+    const dateTime: string = toStyle(toStyle(now(), colorDate), StyleOpt.italic)
+    const mensagem: string = toStyle(toStyle(msg.toUpperCase().trim(), colorMsg), StyleOpt.bold)
 
-    const out = `[${group}]${dateTime}-${mensagem}`;
-    const outWithColors = `[${group}]${dateTime}-${mensagem}`;
+    const out = `[${group}]${dateTime}-${mensagem}`
+    const outWithColors = `[${group}]${dateTime}-${mensagem}`
 
     if (dump) {
-      console.log(outWithColors);
+      console.log(outWithColors)
     }
 
-    return out;
+    return out
   },
   toStyle(style: string) {
     console.log(toStyle(msg, style))
-    return msg;
+    return msg
   },
   br() {
-    breakLine();
+    breakLine()
   },
   ok(dump = true) {
-    return Print(msg).exec('ok', dump);
+    return Print(msg).exec('ok', dump)
   },
   success(dump = true) {
-    return Print(msg).exec('success', dump);
+    return Print(msg).exec('success', dump)
   },
   warn(dump = true) {
-    return Print(msg).exec('warn', dump);
+    return Print(msg).exec('warn', dump)
   },
   err(dump = true) {
-    return Print(msg).exec('err', dump);
+    return Print(msg).exec('err', dump)
   },
   fail(dump = true) {
-    return Print(msg).exec('fail', dump);
+    return Print(msg).exec('fail', dump)
   },
   notice(dump = true) {
-    return Print(msg).exec('notice', dump);
+    return Print(msg).exec('notice', dump)
   },
   info(dump = true) {
-    return Print(msg).exec('info', dump);
+    return Print(msg).exec('info', dump)
   },
   dump() {
-    console.log(msg);
-    return msg;
+    console.log(msg)
+    return msg
   },
-});
+})

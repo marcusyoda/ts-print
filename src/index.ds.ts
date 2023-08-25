@@ -1,5 +1,5 @@
-export type stringFunction = (string: string) => string;
-export type voidFunction = () => void;
+export type stringFunction = (string: string) => string
+export type voidFunction = () => void
 
 export enum StyleOpt {
   reset = 'reset',
@@ -47,18 +47,18 @@ export enum StyleOpt {
 }
 
 export type StyleType = {
-  [key: string]: number[];
+  [key: string]: number[]
 }
 
 export interface StyleInterfaceRes {
-  open: string;
-  close: string;
-  style?: string;
+  open: string
+  close: string
+  style?: string
 }
 
-export type StyleInterface = (style: string) => StyleInterfaceRes;
+export type StyleInterface = (style: string) => StyleInterfaceRes
 
-export type ToColorInterface = (msg: string, style: string) => string;
+export type ToColorInterface = (msg: string, style: string) => string
 
 export enum LogType {
   notice = 'notice',
@@ -70,21 +70,21 @@ export enum LogType {
   ok = 'ok',
 }
 
-export type PrintDumperInterface = (dump?: boolean) => string;
+export type PrintDumperInterface = (dump?: boolean) => string
 
 export interface IPrintResponse {
-  br: voidFunction,
-  ok: PrintDumperInterface,
-  success: PrintDumperInterface,
-  warn: PrintDumperInterface,
-  err: PrintDumperInterface,
-  fail: PrintDumperInterface,
-  notice: PrintDumperInterface,
-  info: PrintDumperInterface,
-  toStyle: stringFunction,
-  exec: (type: string, dump: boolean) => string,
-  dump: () => string,
+  br: voidFunction
+  ok: PrintDumperInterface
+  success: PrintDumperInterface
+  warn: PrintDumperInterface
+  err: PrintDumperInterface
+  fail: PrintDumperInterface
+  notice: PrintDumperInterface
+  info: PrintDumperInterface
+  toStyle: stringFunction
+  exec: (type: string, dump: boolean) => string
+  dump: () => string
 }
 
-export type IPrint = (msg: string) => IPrintResponse;
-export default IPrint;
+export type IPrint = (msg: string) => IPrintResponse
+export default IPrint
