@@ -1,12 +1,13 @@
 {
   "name": "ts-print",
   "description": "Biblioteca útil para debug em node, com cores e datas formatadas, se propõe a ser intuitiva.",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "license": "MIT",
   "author": "Marcus Yoda <marcus@acelera.cloud>",
   "repository": "https://github.com/aceleracloud/ts-print.git",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
+  "types": "lib/types.d.ts",
   "files": [
     "lib",
     "package.json"
