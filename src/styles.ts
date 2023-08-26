@@ -1,53 +1,59 @@
-import { StyleType, StyleOpt } from './index.ds'
+import { Styles, Style } from './types'
 
-export const Styles: StyleType = {
-  [StyleOpt.reset]: [0, 0],
+const RESET_COLOR = 39
+const RESET_BG_COLOR = 49
 
-  [StyleOpt.bold]: [1, 22],
-  [StyleOpt.dim]: [2, 22],
-  [StyleOpt.italic]: [3, 23],
-  [StyleOpt.underline]: [4, 24],
-  [StyleOpt.inverse]: [7, 27],
-  [StyleOpt.hidden]: [8, 28],
-  [StyleOpt.strikethrough]: [9, 29],
+export const styles: Styles = {
+  [Style.reset]: [0, 0],
 
-  [StyleOpt.black]: [30, 39],
-  [StyleOpt.red]: [31, 39],
-  [StyleOpt.green]: [32, 39],
-  [StyleOpt.yellow]: [33, 39],
-  [StyleOpt.blue]: [34, 39],
-  [StyleOpt.magenta]: [35, 39],
-  [StyleOpt.cyan]: [36, 39],
-  [StyleOpt.white]: [37, 39],
-  [StyleOpt.gray]: [90, 39],
-  [StyleOpt.grey]: [90, 39],
+  // Text styles
+  [Style.bold]: [1, 22],
+  [Style.dim]: [2, 22],
+  [Style.italic]: [3, 23],
+  [Style.underline]: [4, 24],
+  [Style.inverse]: [7, 27],
+  [Style.hidden]: [8, 28],
+  [Style.strikethrough]: [9, 29],
 
-  [StyleOpt.brightRed]: [91, 39],
-  [StyleOpt.brightGreen]: [92, 39],
-  [StyleOpt.brightYellow]: [93, 39],
-  [StyleOpt.brightBlue]: [94, 39],
-  [StyleOpt.brightMagenta]: [95, 39],
-  [StyleOpt.brightCyan]: [96, 39],
-  [StyleOpt.brightWhite]: [97, 39],
+  // Text colors
+  [Style.black]: [30, RESET_COLOR],
+  [Style.red]: [31, RESET_COLOR],
+  [Style.green]: [32, RESET_COLOR],
+  [Style.yellow]: [33, RESET_COLOR],
+  [Style.blue]: [34, RESET_COLOR],
+  [Style.magenta]: [35, RESET_COLOR],
+  [Style.cyan]: [36, RESET_COLOR],
+  [Style.white]: [37, RESET_COLOR],
+  [Style.gray]: [90, RESET_COLOR],
+  [Style.grey]: [90, RESET_COLOR],
 
-  [StyleOpt.bgBlack]: [40, 49],
-  [StyleOpt.bgRed]: [41, 49],
-  [StyleOpt.bgGreen]: [42, 49],
-  [StyleOpt.bgYellow]: [43, 49],
-  [StyleOpt.bgBlue]: [44, 49],
-  [StyleOpt.bgMagenta]: [45, 49],
-  [StyleOpt.bgCyan]: [46, 49],
-  [StyleOpt.bgWhite]: [47, 49],
-  [StyleOpt.bgGray]: [100, 49],
-  [StyleOpt.bgGrey]: [100, 49],
+  // Bright text colors
+  [Style.brightRed]: [91, RESET_COLOR],
+  [Style.brightGreen]: [92, RESET_COLOR],
+  [Style.brightYellow]: [93, RESET_COLOR],
+  [Style.brightBlue]: [94, RESET_COLOR],
+  [Style.brightMagenta]: [95, RESET_COLOR],
+  [Style.brightCyan]: [96, RESET_COLOR],
+  [Style.brightWhite]: [97, RESET_COLOR],
 
-  [StyleOpt.bgBrightRed]: [101, 49],
-  [StyleOpt.bgBrightGreen]: [102, 49],
-  [StyleOpt.bgBrightYellow]: [103, 49],
-  [StyleOpt.bgBrightBlue]: [104, 49],
-  [StyleOpt.bgBrightMagenta]: [105, 49],
-  [StyleOpt.bgBrightCyan]: [106, 49],
-  [StyleOpt.bgBrightWhite]: [107, 49],
+  // Background colors
+  [Style.bgBlack]: [40, RESET_BG_COLOR],
+  [Style.bgRed]: [41, RESET_BG_COLOR],
+  [Style.bgGreen]: [42, RESET_BG_COLOR],
+  [Style.bgYellow]: [43, RESET_BG_COLOR],
+  [Style.bgBlue]: [44, RESET_BG_COLOR],
+  [Style.bgMagenta]: [45, RESET_BG_COLOR],
+  [Style.bgCyan]: [46, RESET_BG_COLOR],
+  [Style.bgWhite]: [47, RESET_BG_COLOR],
+  [Style.bgGray]: [100, RESET_BG_COLOR],
+  [Style.bgGrey]: [100, RESET_BG_COLOR],
+
+  // Bright background colors
+  [Style.bgBrightRed]: [101, RESET_BG_COLOR],
+  [Style.bgBrightGreen]: [102, RESET_BG_COLOR],
+  [Style.bgBrightYellow]: [103, RESET_BG_COLOR],
+  [Style.bgBrightBlue]: [104, RESET_BG_COLOR],
+  [Style.bgBrightMagenta]: [105, RESET_BG_COLOR],
+  [Style.bgBrightCyan]: [106, RESET_BG_COLOR],
+  [Style.bgBrightWhite]: [107, RESET_BG_COLOR],
 }
-
-export default Styles

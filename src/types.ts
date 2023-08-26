@@ -1,7 +1,4 @@
-export type stringFunction = (string: string) => string
-export type voidFunction = () => void
-
-export enum StyleOpt {
+export enum Style {
   reset = 'reset',
   bold = 'bold',
   dim = 'dim',
@@ -46,45 +43,43 @@ export enum StyleOpt {
   bgBrightWhite = 'bgBrightWhite',
 }
 
-export type StyleType = {
+export type Styles = {
   [key: string]: number[]
 }
 
-export interface StyleInterfaceRes {
+export interface StyleResponse {
   open: string
   close: string
-  style?: string
+  color?: string
 }
-
-export type StyleInterface = (style: string) => StyleInterfaceRes
-
-export type ToColorInterface = (msg: string, style: string) => string
 
 export enum LogType {
-  notice = 'notice',
-  info = 'info',
+  ok = 'ok',
   warn = 'warn',
   err = 'err',
-  fail = 'fail',
-  success = 'success',
-  ok = 'ok',
+  info = 'info',
+  debug = 'debug',
 }
 
-export type PrintDumperInterface = (dump?: boolean) => string
-
-export interface IPrintResponse {
-  br: voidFunction
-  ok: PrintDumperInterface
-  success: PrintDumperInterface
-  warn: PrintDumperInterface
-  err: PrintDumperInterface
-  fail: PrintDumperInterface
-  notice: PrintDumperInterface
-  info: PrintDumperInterface
-  toStyle: stringFunction
-  exec: (type: string, dump: boolean) => string
-  dump: () => string
+export type LogTypeResponse = {
+  name: string
+  colorGroup: string
+  colorDate: string
+  colorMsg: string
 }
 
-export type IPrint = (msg: string) => IPrintResponse
-export default IPrint
+export type PrinterTransport = (message: string, meta?: Record<string, any>) => void
+
+export type PrinterOptions = {
+  dumpDate?: boolean
+  transporter?: PrinterTransport
+}
+
+export interface IPrinter {
+  br: () => void
+  ok: () => void
+  warn: () => void
+  err: () => void
+  info: () => void
+  debug: () => void
+}

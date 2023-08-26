@@ -1,84 +1,61 @@
-import { br as breakLine, groupByType, now } from './helpers'
-import IPrint, { StyleOpt } from './index.ds'
-import toStyle from './toStyles'
+import { applyStyle, groupByType, now } from './helpers'
 
-export const Print: IPrint = (msg = '') => ({
-  exec(type: string, dump = true) {
-    const groupText: string = groupByType(type)
+import { IPrinter, LogType, PrinterOptions, PrinterTransport, Style } from './types'
 
-    let colorGroup: string = StyleOpt.green
-    let colorDate: string = StyleOpt.brightGreen
-    let colorMsg: string = StyleOpt.white
+export class Printer implements IPrinter {
+  private message: string
 
-    switch (type) {
-      case 'ok':
-      case 'success':
-        colorGroup = StyleOpt.green
-        colorDate = StyleOpt.brightGreen
-        colorMsg = StyleOpt.white
-        break
-      case 'warn':
-        colorGroup = StyleOpt.yellow
-        colorDate = StyleOpt.grey
-        colorMsg = StyleOpt.white
-        break
-      case 'err':
-      case 'fail':
-        colorGroup = StyleOpt.red
-        colorDate = StyleOpt.magenta
-        colorMsg = StyleOpt.white
-        break
-      case 'info':
-      case 'notice':
-        colorGroup = StyleOpt.blue
-        colorDate = StyleOpt.cyan
-        colorMsg = StyleOpt.white
-        break
-    }
+  private meta?: Record<string, any>
 
-    const group: string = toStyle(toStyle(toStyle(toStyle(groupText, colorGroup), StyleOpt.bold), 'bold'), 'black')
-    const dateTime: string = toStyle(toStyle(now(), colorDate), StyleOpt.italic)
-    const mensagem: string = toStyle(toStyle(msg.toUpperCase().trim(), colorMsg), StyleOpt.bold)
+  private dumpDate: boolean
 
-    const out = `[${group}]${dateTime}-${mensagem}`
-    const outWithColors = `[${group}]${dateTime}-${mensagem}`
+  private transporter: PrinterTransport
 
-    if (dump) {
-      console.log(outWithColors)
-    }
+  constructor(message: string, meta?: Record<string, any>, options?: PrinterOptions) {
+    this.message = message
+    this.meta = meta
 
-    return out
-  },
-  toStyle(style: string) {
-    console.log(toStyle(msg, style))
-    return msg
-  },
+    this.dumpDate = options?.dumpDate ?? false
+    this.transporter = options?.transporter ?? console.log
+  }
+
+  private dump(type: LogType): void {
+    const { name, colorGroup, colorDate, colorMsg } = groupByType(type)
+
+    const group: string = applyStyle(name, colorGroup, Style.bold, Style.black)
+    const dateTime: string = this.dumpDate ? applyStyle(now(), colorDate, Style.italic) : ''
+    const message: string = applyStyle(this.message.toUpperCase().trim(), colorMsg, Style.bold)
+
+    const out = this.dumpDate ? `${group} ${dateTime} - ${message}` : `${group} - ${message}`
+
+    this.transporter(out, this.meta)
+  }
+
   br() {
-    breakLine()
-  },
-  ok(dump = true) {
-    return Print(msg).exec('ok', dump)
-  },
-  success(dump = true) {
-    return Print(msg).exec('success', dump)
-  },
-  warn(dump = true) {
-    return Print(msg).exec('warn', dump)
-  },
-  err(dump = true) {
-    return Print(msg).exec('err', dump)
-  },
-  fail(dump = true) {
-    return Print(msg).exec('fail', dump)
-  },
-  notice(dump = true) {
-    return Print(msg).exec('notice', dump)
-  },
-  info(dump = true) {
-    return Print(msg).exec('info', dump)
-  },
-  dump() {
-    console.log(msg)
-    return msg
-  },
-})
+    this.transporter('\n')
+  }
+
+  ok() {
+    this.dump(LogType.ok)
+  }
+
+  warn() {
+    this.dump(LogType.warn)
+  }
+
+  err() {
+    this.dump(LogType.err)
+  }
+
+  info() {
+    this.dump(LogType.info)
+  }
+
+  debug() {
+    this.dump(LogType.debug)
+  }
+}
+
+export const Print = (message: string, meta?: Record<string, any>, options?: PrinterOptions): Printer => {
+  return new Printer(message, meta, options)
+}

@@ -1,35 +1,68 @@
-import { LogType, stringFunction, voidFunction } from './index.ds'
+import { styles } from './styles'
+
+import { LogType, LogTypeResponse, Style, StyleResponse } from './types'
 
 export const now = (): string => {
   const date = new Date()
+
   if (process.env.TS_PRINT_ONLY_DATE) {
     return date.toLocaleDateString()
   }
 
-  return `${date.toLocaleDateString()}-${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+  const hours = date.getHours().toString().padStart(2, '0')
+  const minutes = date.getMinutes().toString().padStart(2, '0')
+  const seconds = date.getSeconds().toString().padStart(2, '0')
+
+  return `${date.toLocaleDateString()}-${hours}:${minutes}:${seconds}`
 }
 
-/**
- * @param type
- */
-export const groupByType: stringFunction = (type: string): string => {
-  switch (type) {
-    case LogType.fail:
-      return 'FAIL'
-    case LogType.err:
-      return 'ERR'
-    case LogType.warn:
-      return 'ALERT'
-    case LogType.info:
-      return 'INFO'
-    case LogType.notice:
-      return 'NOTICE'
-    case LogType.success:
-      return 'SUCCESS'
-    case LogType.ok:
-      return 'OK'
+const LOG_TYPE_MAP: { [key in LogType]: LogTypeResponse } = {
+  [LogType.ok]: {
+    name: 'OK',
+    colorGroup: Style.green,
+    colorDate: Style.brightGreen,
+    colorMsg: Style.white,
+  },
+  [LogType.warn]: {
+    name: 'WARN',
+    colorGroup: Style.yellow,
+    colorDate: Style.grey,
+    colorMsg: Style.white,
+  },
+  [LogType.err]: {
+    name: 'ERR',
+    colorGroup: Style.red,
+    colorDate: Style.magenta,
+    colorMsg: Style.white,
+  },
+  [LogType.info]: {
+    name: 'INFO',
+    colorGroup: Style.blue,
+    colorDate: Style.cyan,
+    colorMsg: Style.white,
+  },
+  [LogType.debug]: {
+    name: 'DEBUG',
+    colorGroup: Style.cyan,
+    colorDate: Style.blue,
+    colorMsg: Style.white,
+  },
+}
+
+export const groupByType = (type: LogType): LogTypeResponse => {
+  return LOG_TYPE_MAP[type] ?? LOG_TYPE_MAP[LogType.info]
+}
+
+export const getStyle = (color: string): StyleResponse => {
+  const val: number[] = styles[color]
+
+  return { open: `\u001b[${val[0]}m`, close: `\u001b[${val[1]}m`, color }
+}
+
+export const applyStyle = (msg: string, ...styles: string[]): string => {
+  for (const style of styles) {
+    const { open, close } = getStyle(style)
+    msg = `${open}${msg}${close}`
   }
-  return type
+  return msg
 }
-
-export const br: voidFunction = () => console.log('')
