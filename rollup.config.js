@@ -1,4 +1,6 @@
 import typescript from 'rollup-plugin-typescript2'
+import commonjs from '@rollup/plugin-commonjs'
+
 export default [
   {
     input: './src/index.ts',
@@ -6,7 +8,7 @@ export default [
       file: './lib/index.esm.js',
       format: 'esm',
     },
-    plugins: [typescript()],
+    plugins: [typescript(), commonjs()],
   },
   {
     input: './src/index.ts',
@@ -14,6 +16,6 @@ export default [
       file: './lib/index.js',
       format: 'cjs',
     },
-    plugins: [typescript()],
+    plugins: [typescript(), commonjs()],
   },
 ]
