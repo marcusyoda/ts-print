@@ -5,13 +5,13 @@ import { IPrinter, LogType, PrinterOptions, PrinterTransport, Style } from './ty
 export class Printer implements IPrinter {
   private message: string
 
-  private meta?: Record<string, any>
+  private meta?: unknown
 
   private dumpDate: boolean
 
   private transporter: PrinterTransport
 
-  constructor(message: string, meta?: Record<string, any>, options?: PrinterOptions) {
+  constructor(message: string, meta?: unknown, options?: PrinterOptions) {
     this.message = message
     this.meta = meta
 
@@ -56,6 +56,6 @@ export class Printer implements IPrinter {
   }
 }
 
-export const Print = (message: string, meta?: Record<string, any>, options?: PrinterOptions): Printer => {
+export const Print = (message: string, meta?: unknown, options?: PrinterOptions): Printer => {
   return new Printer(message, meta, options)
 }
