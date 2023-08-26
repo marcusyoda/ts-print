@@ -68,7 +68,7 @@ export type LogTypeResponse = {
   colorMsg: string
 }
 
-export type PrinterTransport = (message: string, meta?: Record<string, any>) => void
+export type PrinterTransport = (message: string, meta?: unknown) => void
 
 export type PrinterOptions = {
   dumpDate?: boolean
