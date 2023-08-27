@@ -36,11 +36,11 @@ export class Printer implements IPrinter {
 
     const group: string = applyStyle(name, colorGroup, Style.bold, Style.black)
     const dateTime: string = this.dumpDate ? applyStyle(now(), colorDate, Style.italic) : ''
-    const message: string = applyStyle(this.message.toUpperCase().trim(), colorMsg, Style.bold)
+    const message: string = applyStyle(this.message.trim(), colorMsg, Style.bold)
 
     const out = this.dumpDate ? `${group} ${dateTime} - ${message}` : `${group} - ${message}`
 
-    this.transporter(out, this.meta)
+    this.transporter(out, this.meta ?? '')
   }
 
   br() {

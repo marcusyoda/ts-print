@@ -18,31 +18,31 @@ export const now = (): string => {
 
 const LOG_TYPE_MAP: { [key in LogType]: LogTypeResponse } = {
   [LogType.ok]: {
-    name: 'OK',
+    name: 'ok',
     colorGroup: Style.green,
     colorDate: Style.brightGreen,
     colorMsg: Style.white,
   },
   [LogType.warn]: {
-    name: 'WARN',
+    name: 'warn',
     colorGroup: Style.yellow,
     colorDate: Style.grey,
     colorMsg: Style.white,
   },
   [LogType.err]: {
-    name: 'ERR',
+    name: 'err',
     colorGroup: Style.red,
     colorDate: Style.magenta,
     colorMsg: Style.white,
   },
   [LogType.info]: {
-    name: 'INFO',
+    name: 'info',
     colorGroup: Style.blue,
     colorDate: Style.cyan,
     colorMsg: Style.white,
   },
   [LogType.debug]: {
-    name: 'DEBUG',
+    name: 'debug',
     colorGroup: Style.cyan,
     colorDate: Style.blue,
     colorMsg: Style.white,
