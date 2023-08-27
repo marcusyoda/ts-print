@@ -1,8 +1,10 @@
 import { applyStyle, groupByType, now } from './helpers'
 
-import { IPrint, IPrinter, LogType, PrinterOptions, PrinterTransport, Style } from './types'
+import { IPrint, IPrinter, LogLevel, LogType, PrinterOptions, PrinterTransport, Style } from './types'
 
 export class Printer implements IPrinter {
+  private logLevel: LogLevel
+
   private message: string
 
   private meta?: unknown
@@ -12,6 +14,8 @@ export class Printer implements IPrinter {
   private transporter: PrinterTransport
 
   constructor(message: string, meta?: unknown, options?: PrinterOptions) {
+    this.logLevel = LogLevel[process.env.LOG_LEVEL as keyof typeof LogLevel] ?? LogLevel.debug
+
     this.message = message
     this.meta = meta
 
@@ -19,7 +23,15 @@ export class Printer implements IPrinter {
     this.transporter = options?.transporter ?? console.log
   }
 
+  private shouldLog(type: LogType): boolean {
+    return LogLevel[type] >= this.logLevel
+  }
+
   private dump(type: LogType): void {
+    if (!this.shouldLog(type)) {
+      return
+    }
+
     const { name, colorGroup, colorDate, colorMsg } = groupByType(type)
 
     const group: string = applyStyle(name, colorGroup, Style.bold, Style.black)

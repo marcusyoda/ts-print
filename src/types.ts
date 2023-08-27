@@ -68,6 +68,14 @@ export type LogTypeResponse = {
   colorMsg: string
 }
 
+export enum LogLevel {
+  debug = 1,
+  info = 2,
+  warn = 3,
+  err = 4,
+  ok = 5,
+}
+
 export type PrinterTransport = (message: string, meta?: unknown) => void
 
 export type PrinterOptions = {
