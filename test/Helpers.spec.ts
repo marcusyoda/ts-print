@@ -18,13 +18,13 @@ describe('Helpers', () => {
 
   describe('groupByType function', () => {
     test('should return correct LogTypeResponse for each log type', () => {
-      expect(groupByType(LogType.ok).name).toBe('OK')
-      expect(groupByType(LogType.warn).name).toBe('WARN')
+      expect(groupByType(LogType.ok).name).toBe('ok')
+      expect(groupByType(LogType.warn).name).toBe('warn')
     })
 
-    test('should default to INFO when unknown type is provided', () => {
+    test('should default to info when unknown type is provided', () => {
       const unknownType = 'random' as LogType
-      expect(groupByType(unknownType).name).toBe('INFO')
+      expect(groupByType(unknownType).name).toBe('info')
     })
   })
 

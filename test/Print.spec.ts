@@ -23,7 +23,7 @@ describe('Printer class', () => {
     const instance = new Printer('test')
     instance.ok()
 
-    expect(logSpy).toHaveBeenCalledWith(expect.any(String), undefined)
+    expect(logSpy).toHaveBeenCalledWith(expect.any(String), '')
   })
 
   test('should overwrite default options with provided options', () => {
@@ -35,39 +35,39 @@ describe('Printer class', () => {
     expect(customTransporter).toHaveBeenCalledWith(expect.any(String), {})
   })
 
-  test('ok method should log with OK style', () => {
+  test('ok method should log with ok style', () => {
     const instance = new Printer('test')
     instance.ok()
 
-    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/OK/), undefined)
+    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/ok/), '')
   })
 
-  test('warn method should log with WARN style', () => {
+  test('warn method should log with warn style', () => {
     const instance = new Printer('test')
     instance.warn()
 
-    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/WARN/), undefined)
+    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/warn/), '')
   })
 
-  test('err method should log with ERR style', () => {
+  test('err method should log with err style', () => {
     const instance = new Printer('test')
     instance.err()
 
-    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/ERR/), undefined)
+    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/err/), '')
   })
 
-  test('info method should log with INFO style', () => {
+  test('info method should log with info style', () => {
     const instance = new Printer('test')
     instance.info()
 
-    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/INFO/), undefined)
+    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/info/), '')
   })
 
-  test('debug method should log with DEBUG style', () => {
+  test('debug method should log with debug style', () => {
     const instance = new Printer('test')
     instance.debug()
 
-    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/DEBUG/), undefined)
+    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/debug/), '')
   })
 
   test('br method should log a newline', () => {
@@ -103,7 +103,7 @@ describe('Printer class', () => {
     instance.ok()
 
     expect(logSpy).toHaveBeenCalledTimes(4)
-    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/DEBUG/), undefined)
+    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/debug/), '')
   })
 
   test('should log from warn to ok when LOG_LEVEL is warn', () => {
@@ -118,8 +118,8 @@ describe('Printer class', () => {
     instance.ok()
 
     expect(logSpy).toHaveBeenCalledTimes(3)
-    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/DEBUG/), undefined)
-    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/INFO/), undefined)
+    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/debug/), '')
+    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/info/), '')
   })
 
   test('should only log err and ok when LOG_LEVEL is err', () => {
@@ -134,9 +134,9 @@ describe('Printer class', () => {
     instance.ok()
 
     expect(logSpy).toHaveBeenCalledTimes(2)
-    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/DEBUG/), undefined)
-    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/INFO/), undefined)
-    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/WARN/), undefined)
+    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/debug/), '')
+    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/info/), '')
+    expect(logSpy).not.toHaveBeenCalledWith(expect.stringMatching(/warn/), '')
   })
 
   test('should default to debug if no LOG_LEVEL is set', () => {
@@ -144,6 +144,6 @@ describe('Printer class', () => {
 
     instance.debug()
 
-    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/DEBUG/), undefined)
+    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/debug/), '')
   })
 })
