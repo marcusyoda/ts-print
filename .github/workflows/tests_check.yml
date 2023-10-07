@@ -1,4 +1,4 @@
-name: Code Style Check
+name: Test Check
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  check_style:
+  check_tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,11 +23,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Check formatting
-        run: yarn format:audit
+      - name: Run Tests
+        run: yarn test
 
-      - name: Lint code
-        run: yarn lint:audit
-
-      - name: Type Check
-        run: yarn ts:audit
+      - name: Check Coverage
+        run: yarn test:threshold
